@@ -19,7 +19,6 @@ C:\Users\HP\Documents\11. Kampus\SISTEM AKADEMIK UNIVERSITAS NASIONAL PASIM\siak
 C:\Users\HP\Documents\11. Kampus\SISTEM AKADEMIK UNIVERSITAS NASIONAL PASIM\siakad-pasim\obj\Debug\net8.0\rjimswa.dswa.cache.json
 C:\Users\HP\Documents\11. Kampus\SISTEM AKADEMIK UNIVERSITAS NASIONAL PASIM\siakad-pasim\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 C:\Users\HP\Documents\11. Kampus\SISTEM AKADEMIK UNIVERSITAS NASIONAL PASIM\siakad-pasim\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
-C:\Users\HP\Documents\11. Kampus\SISTEM AKADEMIK UNIVERSITAS NASIONAL PASIM\siakad-pasim\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\HP\Documents\11. Kampus\SISTEM AKADEMIK UNIVERSITAS NASIONAL PASIM\siakad-pasim\obj\Debug\net8.0\scopedcss\bundle\siakad-pasim.styles.css
 C:\Users\HP\Documents\11. Kampus\SISTEM AKADEMIK UNIVERSITAS NASIONAL PASIM\siakad-pasim\obj\Debug\net8.0\scopedcss\projectbundle\siakad-pasim.bundle.scp.css
 C:\Users\HP\Documents\11. Kampus\SISTEM AKADEMIK UNIVERSITAS NASIONAL PASIM\siakad-pasim\obj\Debug\net8.0\staticwebassets.build.json
@@ -32,3 +31,4 @@ C:\Users\HP\Documents\11. Kampus\SISTEM AKADEMIK UNIVERSITAS NASIONAL PASIM\siak
 C:\Users\HP\Documents\11. Kampus\SISTEM AKADEMIK UNIVERSITAS NASIONAL PASIM\siakad-pasim\obj\Debug\net8.0\siakad-pasim.pdb
 C:\Users\HP\Documents\11. Kampus\SISTEM AKADEMIK UNIVERSITAS NASIONAL PASIM\siakad-pasim\obj\Debug\net8.0\siakad-pasim.genruntimeconfig.cache
 C:\Users\HP\Documents\11. Kampus\SISTEM AKADEMIK UNIVERSITAS NASIONAL PASIM\siakad-pasim\obj\Debug\net8.0\ref\siakad-pasim.dll
+C:\Users\HP\Documents\11. Kampus\SISTEM AKADEMIK UNIVERSITAS NASIONAL PASIM\siakad-pasim\obj\Debug\net8.0\scopedcss\Views\Shared\_NavigationLayout.cshtml.rz.scp.css

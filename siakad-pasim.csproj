@@ -7,4 +7,10 @@
     <RootNamespace>siakad_pasim</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Mahasiswa\" />
+    <Folder Include="wwwroot\assets\Logos\" />
+    <Folder Include="wwwroot\assets\Styles\" />
+  </ItemGroup>
+
 </Project>
