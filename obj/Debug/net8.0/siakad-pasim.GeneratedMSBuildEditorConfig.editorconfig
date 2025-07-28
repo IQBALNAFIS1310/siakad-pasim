@@ -1,11 +1,19 @@
 is_global = true
 build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
 build_property.TargetPlatformMinVersion = 
 build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = siakad_pasim
 build_property.RootNamespace = siakad_pasim
@@ -30,6 +38,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/HP/Documents/11. Kampus/SISTEM AKADEMIK UNIVERSITAS NASIONAL PASIM/siakad-pasim/Views/Loginpages/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5wYWdlc1xMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Documents/11. Kampus/SISTEM AKADEMIK UNIVERSITAS NASIONAL PASIM/siakad-pasim/Views/Mahasiswa/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFoYXNpc3dhXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Documents/11. Kampus/SISTEM AKADEMIK UNIVERSITAS NASIONAL PASIM/siakad-pasim/Views/Mahasiswa/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFoYXNpc3dhXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Documents/11. Kampus/SISTEM AKADEMIK UNIVERSITAS NASIONAL PASIM/siakad-pasim/Views/Mahasiswa/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFoYXNpc3dhXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/HP/Documents/11. Kampus/SISTEM AKADEMIK UNIVERSITAS NASIONAL PASIM/siakad-pasim/Views/Mahasiswa/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFoYXNpc3dhXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/HP/Documents/11. Kampus/SISTEM AKADEMIK UNIVERSITAS NASIONAL PASIM/siakad-pasim/Views/Shared/Error.cshtml]

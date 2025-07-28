@@ -1,103 +1,120 @@
 ﻿@{
-    Layout = null;
+	Layout = null;
 }
-
-
-
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login | SIAKAD PASIM</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        :root {
-            --maroon: #800000;
-        }
-    </style>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Login | SIAKAD PASIM</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<style>
+		:root {
+			--maroon: #800000;
+		}
+	</style>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+<body class="bg-gray-100 flex items-center justify-center min-h-screen px-4">
 
-    <div class="flex w-full max-w-5xl rounded-3xl overflow-hidden shadow-lg bg-white">
+	<div class="flex flex-col md:flex-row w-full max-w-5xl rounded-3xl overflow-hidden shadow-lg bg-white my-5 ">
 
+		<!-- Kiri -->
+		<div class="md:w-1/2 w-full bg-[var(--maroon)] text-white p-8 md:p-10 flex flex-col justify-between">
+			<div>
+				<h1 class="text-2xl md:text-3xl font-bold mb-4">SIAKAD PASIM</h1>
+				<p class="text-sm mb-4">
+					Untuk melakukan Login aplikasi, gunakan akun sesuai role Anda: Mahasiswa, Dosen, atau Admin.
+					Hubungi pengelola jika mengalami kendala akses akun.
+				</p>
+			</div>
+			<p class="text-xs mt-6">UNIVERSITAS NASIONAL PASIM. copyright &copy;2025</p>
+		</div>
 
+		<!-- Kanan -->
+		<div class="md:w-1/2 w-full p-6 md:p-10 bg-gray-50">
+			<!-- Logo -->
+			<div class="flex justify-center mb-6">
+				<img src="~/assets/Logos/pasimlogo.png" alt="Logo" class="h-14 md:h-16" />
+			</div>
 
-
-        <!-- Kiri -->
-        <div class="w-1/2 bg-[var(--maroon)] text-white p-10 flex flex-col justify-between">
-            <div>
-                <h1 class="text-3xl font-bold mb-4">SIAKAD PASIM</h1>
-                <p class="text-sm mb-6">
-                    Untuk melakukan Login aplikasi, gunakan akun sesuai role Anda: Mahasiswa, Dosen, atau Admin.
-                    Hubungi pengelola jika mengalami kendala akses akun.
-                </p>
-                <br /><br />
-                <p class="text-sm mb-6">
-                   ini adalah aplikasi resmi universitas nasional pasim, berguna untuk 
-                   mempermudah administrasi mahasiswa di universitas nasional pasim
-                </p>
-            </div>
-            <p class="text-xs mt-6">UNIVERSITAS NASIONAL PASIM. &copy;2025</p>
-        </div>
-
-
-
-        <!-- Kanan -->
-        <div class="w-1/2 p-10 bg-gray-50">
-            <!-- Logo -->
-            <div class="flex justify-center mb-4">
-                <img src="~/assets/Logos/pasimlogo.png" alt="Logo" class="h-16" />
-            </div>
-
-            <!-- Role Selector -->
-            <div class="mb-6">
-                <label class="block mb-2 text-sm font-medium text-gray-700">Login sebagai:</label>
-                <div class="flex space-x-2">
-                    <a href="login-mahasiswa.html" class="flex-1 text-center border border-[var(--maroon)] text-[var(--maroon)] py-2 rounded hover:bg-[var(--maroon)] hover:text-white transition">Mahasiswa</a>
-                    <a href="login-dosen.html" class="flex-1 text-center border border-[var(--maroon)] text-[var(--maroon)] py-2 rounded hover:bg-[var(--maroon)] hover:text-white transition">Dosen</a>
-                    <a href="login-admin.html" class="flex-1 text-center border border-[var(--maroon)] text-[var(--maroon)] py-2 rounded hover:bg-[var(--maroon)] hover:text-white transition">Admin</a>
-                </div>
-            </div>
+			<!-- Role Selector -->
+			<div class="mb-6">
+				<label class="block mb-2 text-sm font-medium text-gray-700">Login sebagai:</label>
+				<div class="flex flex-col sm:flex-row sm:space-x-2 space-y-2 sm:space-y-0">
+					<button type="button" onclick="setRole('mahasiswa')" class="role-btn text-center border border-[var(--maroon)] text-[var(--maroon)] px-4 py-2 rounded hover:bg-[var(--maroon)] hover:text-white transition">Mahasiswa</button>
+					<button type="button" onclick="setRole('dosen')" class="role-btn text-center border border-[var(--maroon)] text-[var(--maroon)] px-4 py-2 rounded hover:bg-[var(--maroon)] hover:text-white transition">Dosen</button>
+					<button type="button" onclick="setRole('admin')" class="role-btn text-center border border-[var(--maroon)] text-[var(--maroon)] px-4 py-2 rounded hover:bg-[var(--maroon)] hover:text-white transition">Admin</button>
+				</div>
+			</div>
 
 
+			<!-- Form -->
+			@using (Html.BeginForm("Login", "LoginPages", FormMethod.Post))
+			{
+				<div class="space-y-4">
+					<div id="formFields" class="space-y-4">
+						<!-- Input akan di-generate otomatis di sini -->
+					</div>
 
+					<button type="submit" class="w-full bg-[var(--maroon)] text-white font-semibold py-2 rounded hover:bg-red-900 transition">LOGIN APLIKASI</button>
+				</div>
+			}
 
-            <!-- GANTI DENGAN INI -->
-            @using (Html.BeginForm("Login", "LoginPages", FormMethod.Post))
-            {
-                <div class="space-y-4">
-                    <input type="text" name="username" placeholder="Username" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[var(--maroon)]" />
+			<!-- Footer -->
+			<div class="mt-6 text-sm text-center text-gray-500">
+				APLIKASI: <span class="font-semibold text-gray-700">SIAKAD PASIM V 1.0</span><br />
+				DATABASE: <span class="font-semibold">3.55</span>
+			</div>
+		</div>
+	</div>
+	<script>
+		const buttonPass = document.getElementById('passShow');
+		const passwordInput = document.querySelector('input[type="password"]');
 
-                    <div class="relative">
-                        <input type="password" name="password" placeholder="Password" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[var(--maroon)]" />
-                        <span class="absolute right-3 top-2.5 text-gray-400 cursor-pointer">👁️</span>
-                    </div>
+		buttonPass.addEventListener('click', function () {
+			const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+			passwordInput.setAttribute('type', type);
+			// Optional: Ubah ikon jika ingin ganti
+			this.textContent = type === 'password' ? '👁️' : '--';
+		});
 
-                    <select name="tahunAjaran" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[var(--maroon)]">
-                        <option value="">Tahun Ajaran</option>
-                        <option value="2024/2025">2024/2025</option>
-                    </select>
+				function setRole(role) {
+			const formFields = document.getElementById('formFields');
+			let html = '';
 
-                    <button type="submit" class="w-full bg-[var(--maroon)] text-white font-semibold py-2 rounded hover:bg-red-900 transition">LOGIN APLIKASI</button>
-                </div>
-            }
+			if (role === 'mahasiswa') {
+				html = `
+					<input type="text" name="nim" placeholder="NIM Mahasiswa" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[var(--maroon)]" />
+					<input type="date" name="tglLahir" placeholder="Tanggal Lahir" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[var(--maroon)]" />
+					<select name="tahunAjaran" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[var(--maroon)]">
+						<option value="">Tahun Ajaran</option>
+						<option value="2024/2025">2024/2025</option>
+					</select>
+				`;
+			} else if (role === 'dosen') {
+				html = `
+					<input type="text" name="nomorDosen" placeholder="Nomor Induk Dosen" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[var(--maroon)]" />
+					<input type="password" name="passwordDosen" placeholder="Password" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[var(--maroon)]" />
+				`;
+			} else if (role === 'admin') {
+				html = `
+					<input type="text" name="username" placeholder="Username Admin" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[var(--maroon)]" />
+					<input type="password" name="password" placeholder="Password" class="w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-[var(--maroon)]" />
+				`;
+			}
 
+			formFields.innerHTML = html;
 
+			// Highlight active button
+			document.querySelectorAll('.role-btn').forEach(btn => {
+				btn.classList.remove('bg-[var(--maroon)]', 'text-white');
+				btn.classList.add('text-[var(--maroon)]');
+			});
+			event.target.classList.add('bg-[var(--maroon)]', 'text-white');
+		}
 
-
-
-
-
-
-            <!-- Footer -->
-            <div class="mt-6 text-sm text-center text-gray-500">
-                APLIKASI: <span class="font-semibold text-gray-700">SIAKAD PASIM V 1.0 </span><br />
-                DATABASE: <span class="font-semibold">3.55</span>
-            </div>
-        </div>
-    </div>
-
+		// Load default role
+		window.onload = () => setRole('admin'); // Ubah default jika perlu
+	</script>
 </body>
 </html>

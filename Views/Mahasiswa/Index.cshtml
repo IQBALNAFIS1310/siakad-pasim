@@ -1,0 +1,62 @@
+﻿@model List<siakad_pasim.Models.Dbs.Mahasiswa>
+
+<div class="min-h-screen bg-gray-50 py-10 px-4 sm:px-8 lg:px-16">
+    <div class="max-w-7xl mx-auto">
+        <div class="flex justify-between items-center mb-6">
+            <h1 class="text-3xl font-bold text-gray-800">Daftar Mahasiswa</h1>
+            <a asp-action="Create" class="btn-danger">
+                + Tambah Mahasiswa
+            </a>
+        </div>
+        @if (TempData["Success"] != null)
+        {
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                @TempData["Success"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+
+        <div class="overflow-x-auto shadow-md rounded-lg">
+            <table class="table datatable">
+                <thead>
+                    <tr>
+                        <th class="px-6 py-4 border-b">Nama</th>
+                        <th class="px-6 py-4 border-b">NIM</th>
+                        <th class="px-6 py-4 border-b">Jenis Kelamin</th>
+                        <th class="px-6 py-4 border-b">Agama</th>
+                        <th class="px-6 py-4 border-b">Tanggal Lahir</th>
+                        <th class="px-6 py-4 border-b">Program Studi</th>
+                        <th class="px-6 py-4 border-b">Status</th>
+                        <th class="px-6 py-4 border-b">tanggal masuk</th>
+                        <th class="px-6 py-4 border-b text-center">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var m in Model)
+                    {
+                        <tr class="hover:bg-gray-50 border-t">
+                            <td class="px-6 py-3">@m.Nama</td>
+                            <td class="px-6 py-3">@m.NIM</td>
+                            <td class="px-6 py-3">@m.JenisKelamin</td>
+                            <td class="px-6 py-3">@m.Agama</td>
+                            <td class="px-6 py-3">@m.TempatTanggalLahir</td>
+                            <td class="px-6 py-3">@m.ProgramStudi</td>
+                            <td class="px-6 py-3">@m.StatusMahasiswa</td>
+                            <td class="px-6 py-3">@m.TanggalMasuk</td>
+                            <td class="px-6 py-3 text-center space-x-2">
+                                <a asp-action="Edit" asp-route-id="@m.Id" class="text-blue-600 hover:underline">Edit</a>
+                                <a asp-action="Delete" asp-route-id="@m.Id" class="text-red-600 hover:underline">Hapus</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <!-- End Table with stripped rows -->
+        </div>
+
+        @if (!Model.Any())
+        {
+            <p class="text-center mt-6 text-gray-500">Tidak ada data mahasiswa yang tersedia.</p>
+        }
+    </div>
+</div>

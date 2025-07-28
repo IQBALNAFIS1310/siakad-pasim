@@ -1,7 +1,15 @@
+using Microsoft.EntityFrameworkCore;
+using siakad_pasim.Models;
+using siakad_pasim.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+//koneksi Database
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddScoped<MahasiswaService>();
 
 var app = builder.Build();
 

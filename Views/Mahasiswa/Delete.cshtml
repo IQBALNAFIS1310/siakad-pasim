@@ -1,0 +1,8 @@
+﻿@model siakad_pasim.Models.Dbs.Mahasiswa
+<h2>Hapus Mahasiswa</h2>
+<p>Apakah yakin ingin menghapus data <strong>@Model.Nama</strong>?</p>
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit">Ya</button>
+    <a asp-action="Index">Batal</a>
+</form>
