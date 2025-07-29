@@ -163,7 +163,6 @@ C:\Users\HP\Documents\11. Kampus\SISTEM AKADEMIK UNIVERSITAS NASIONAL PASIM\siak
 C:\Users\HP\Documents\11. Kampus\SISTEM AKADEMIK UNIVERSITAS NASIONAL PASIM\siakad-pasim\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\HP\Documents\11. Kampus\SISTEM AKADEMIK UNIVERSITAS NASIONAL PASIM\siakad-pasim\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\HP\Documents\11. Kampus\SISTEM AKADEMIK UNIVERSITAS NASIONAL PASIM\siakad-pasim\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\HP\Documents\11. Kampus\SISTEM AKADEMIK UNIVERSITAS NASIONAL PASIM\siakad-pasim\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\HP\Documents\11. Kampus\SISTEM AKADEMIK UNIVERSITAS NASIONAL PASIM\siakad-pasim\obj\Debug\net8.0\siakad-p.057EF551.Up2Date
 C:\Users\HP\Documents\11. Kampus\SISTEM AKADEMIK UNIVERSITAS NASIONAL PASIM\siakad-pasim\obj\Debug\net8.0\siakad-pasim.dll
 C:\Users\HP\Documents\11. Kampus\SISTEM AKADEMIK UNIVERSITAS NASIONAL PASIM\siakad-pasim\obj\Debug\net8.0\refint\siakad-pasim.dll
