@@ -177,3 +177,4 @@ C:\Users\HP\Documents\11. Kampus\SISTEM AKADEMIK UNIVERSITAS NASIONAL PASIM\siak
 C:\Users\HP\Documents\11. Kampus\SISTEM AKADEMIK UNIVERSITAS NASIONAL PASIM\siakad-pasim\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
 C:\Users\HP\Documents\11. Kampus\SISTEM AKADEMIK UNIVERSITAS NASIONAL PASIM\siakad-pasim\bin\Debug\net8.0\System.Security.Cryptography.Xml.dll
 C:\Users\HP\Documents\11. Kampus\SISTEM AKADEMIK UNIVERSITAS NASIONAL PASIM\siakad-pasim\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\HP\Documents\11. Kampus\SISTEM AKADEMIK UNIVERSITAS NASIONAL PASIM\siakad-pasim\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

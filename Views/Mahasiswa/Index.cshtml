@@ -4,59 +4,56 @@
     <div class="max-w-7xl mx-auto">
         <div class="flex justify-between items-center mb-6">
             <h1 class="text-3xl font-bold text-gray-800">Daftar Mahasiswa</h1>
-            <a asp-action="Create" class="btn-danger">
+            <a asp-action="Create" class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition">
                 + Tambah Mahasiswa
             </a>
         </div>
-        @if (TempData["Success"] != null)
-        {
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                @TempData["Success"]
-                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-            </div>
-        }
 
-        <div class="overflow-x-auto shadow-md rounded-lg">
-            <table class="table datatable">
-                <thead>
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 space-y-2 sm:space-y-0">
+            <input id="searchInput" type="text" placeholder="Cari nama..."
+                   class="w-full sm:w-1/3 px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-300" />
+
+            <select id="entriesPerPage" class="px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-300">
+                <option value="10">10 data</option>
+                <option value="15">15 data</option>
+                <option value="All">Semua</option>
+            </select>
+        </div>
+
+        <div class="overflow-x-auto bg-white shadow-md rounded-lg">
+            <table id="mahasiswaTable" class="min-w-full table-auto">
+                <thead class="bg-gray-100 text-gray-700 text-left text-sm uppercase">
                     <tr>
-                        <th class="px-6 py-4 border-b">Nama</th>
-                        <th class="px-6 py-4 border-b">NIM</th>
-                        <th class="px-6 py-4 border-b">Jenis Kelamin</th>
-                        <th class="px-6 py-4 border-b">Agama</th>
-                        <th class="px-6 py-4 border-b">Tanggal Lahir</th>
-                        <th class="px-6 py-4 border-b">Program Studi</th>
-                        <th class="px-6 py-4 border-b">Status</th>
-                        <th class="px-6 py-4 border-b">tanggal masuk</th>
-                        <th class="px-6 py-4 border-b text-center">Aksi</th>
+                        <th class="px-6 py-4">Nama</th>
+                        <th class="px-6 py-4">NIM</th>
+                        <th class="px-6 py-4">Jenis Kelamin</th>
+                        <th class="px-6 py-4">Program Studi</th>
+                        <th class="px-6 py-4">Tanggal Masuk</th>
+                        <th class="px-6 py-4 text-center">Aksi</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="tableBody" class="text-gray-700 text-sm">
                     @foreach (var m in Model)
                     {
-                        <tr class="hover:bg-gray-50 border-t">
-                            <td class="px-6 py-3">@m.Nama</td>
+                        <tr class="border-b hover:bg-gray-50 transition">
+                            <td class="px-6 py-3">
+                                <a asp-action="Details" asp-route-id="@m.Id" class="text-blue-600 hover:underline font-medium">
+                                    @m.Nama
+                                </a>
+                            </td>
                             <td class="px-6 py-3">@m.NIM</td>
                             <td class="px-6 py-3">@m.JenisKelamin</td>
-                            <td class="px-6 py-3">@m.Agama</td>
-                            <td class="px-6 py-3">@m.TempatTanggalLahir</td>
                             <td class="px-6 py-3">@m.ProgramStudi</td>
-                            <td class="px-6 py-3">@m.StatusMahasiswa</td>
-                            <td class="px-6 py-3">@m.TanggalMasuk</td>
+                            <td class="px-6 py-3">@m.TanggalMasuk.ToString("dd-MM-yyyy")</td>
                             <td class="px-6 py-3 text-center space-x-2">
-                                <a asp-action="Edit" asp-route-id="@m.Id" class="text-blue-600 hover:underline">Edit</a>
-                                <a asp-action="Delete" asp-route-id="@m.Id" class="text-red-600 hover:underline">Hapus</a>
+                                <a asp-action="Edit" asp-route-id="@m.Id" class="text-blue-500 hover:underline">Edit</a>
+                                <a asp-action="Delete" asp-route-id="@m.Id" class="text-red-500 hover:underline">Hapus</a>
                             </td>
                         </tr>
                     }
                 </tbody>
             </table>
-            <!-- End Table with stripped rows -->
         </div>
 
-        @if (!Model.Any())
-        {
-            <p class="text-center mt-6 text-gray-500">Tidak ada data mahasiswa yang tersedia.</p>
-        }
     </div>
 </div>
