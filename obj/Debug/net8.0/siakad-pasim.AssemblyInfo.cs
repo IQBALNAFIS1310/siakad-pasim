@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("siakad-pasim")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af3edc602acf9dd9eb7bb01a0ab2aded1a65a251")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f4b58da7e793c6a080157564642af68832024742")]
 [assembly: System.Reflection.AssemblyProductAttribute("siakad-pasim")]
 [assembly: System.Reflection.AssemblyTitleAttribute("siakad-pasim")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

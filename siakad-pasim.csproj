@@ -9,7 +9,6 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\assets\Logos\" />
-    <Folder Include="wwwroot\assets\Styles\" />
   </ItemGroup>
 
   <ItemGroup>
